@@ -1,0 +1,29 @@
+body{
+	background-color:#00aced;
+}
+.input{
+	margin-left: 350px;
+	font-size: 1.8em;
+	color: white;
+	font-weight: bold;
+}
+#dataForm{
+	display: none;
+}
+#screenNameTextbox{
+	font-size: 1em;
+}
+#submitButton{
+	margin-top: 35px;
+	margin-left: 125px;
+	font-size: 0.8em;
+	color: #00ACED;
+	background-color: white;
+}
+.responseMsgs{
+	margin-top: 55px;
+	margin-left: 350px;
+	color: white;
+	font-weight: bold;
+	font-size: 1.1em;
+}

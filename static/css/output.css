@@ -1,0 +1,22 @@
+
+#goHomeButton{
+	margin-left:355px;
+	margin-top:20px;
+	font-size: 17px;
+	color: black;
+	background-color: white;
+}
+#tweetCountText{
+	padding:5px; 
+	margin-left: 100px;
+	font-size: 1.1em;
+	color: white;
+	font-weight: bold;
+}
+html { 
+	background: url(/images/BigTwit.jpg); no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

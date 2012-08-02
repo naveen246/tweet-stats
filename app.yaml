@@ -1,0 +1,25 @@
+application: tweet-stat
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /js
+  static_dir: static/js
+  
+- url: /css
+  static_dir: static/css
+  
+- url: /images
+  static_dir: static/images
+  
+- url: /lib
+  static_dir: lib
+
+- url: /.*
+  script: tweetstat.app
+
+libraries:
+- name: jinja2
+  version: latest

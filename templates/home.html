@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="/js/home.js"></script >
+	<link rel="stylesheet" type="text/css" href="/css/home.css" /> 
+</head>
+<body onload="setFocus('screenNameTextbox')">
+
+	<img src="/images/twitter-bird-white-on-blue.png" />
+	
+	<form action="/output" method="POST" id="dataForm"> 
+		<input type='text' name='twitterData' id="twitterData"/>
+	</form> 
+	
+	<div class="input">
+		Twitter handle:   @ 
+		<input id="screenNameTextbox" type="text" onkeypress="detectEnterPress(event)" value=""/><br />
+		<input id="submitButton" type="button" onclick="onSubmit()" value="Generate Cloud"/>
+	</div>
+
+	<div class="responseMsgs">
+		<div id="errorMsg"></div>
+		<div id="errorResponse"></div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--[if lt IE 9]><script type="text/javascript" src="/lib/excanvas.js"></script><![endif]-->
+    <script src="/lib/tagcanvas.min.js" type="text/javascript"></script>
+    <script src="/js/output.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="/css/output.css" />
+</head>
+
+<body>
+	
+	<input id="goHomeButton" type="button" value="Try another twitter handle" onclick="window.location.href='/'">
+	<span id="tweetCountText">
+		Click on the numbers to get the count of tweets having those many words 
+	</span>
+	<div id="myCanvasContainer">
+		<canvas width="1250" height="600" id="myCanvas"></canvas>
+	</div>
+
+	<div id="tags">
+		<ul>
+			{% for wordCount in tweetStat %}
+				<li value={{ tweetStat[wordCount] }} onclick="showTweetCount({{tweetStat[wordCount]}}, {{ wordCount }})">
+					<a href="#" data-weight="{{ tweetStat[wordCount] }}">{{ wordCount }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	
+
+</body>
+</html>
