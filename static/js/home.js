@@ -67,6 +67,7 @@ var twitter = {
 		document.getElementById("errorResponse").innerHTML = "";
 		
 		if ("error" in data){	//handling errors that the api returns
+			document.body.style.cursor = 'auto';
 			var errorResponse = "";
 			document.getElementById("errorMsg").innerHTML = "Error: " + data.error;
 			if(data.error == "Not found")
@@ -75,12 +76,12 @@ var twitter = {
 				errorResponse = "Twitter timeline might not be public.";
 			document.getElementById("errorResponse").innerHTML = errorResponse;
 		} 
-		else if(data.length == 0)
-			document.getElementById("errorMsg").innerHTML = "You might have zero tweets on twitter!";
-		else{
-			document.body.style.cursor = 'wait';
-			this.takeRequiredData(data);
+		else if(data.length == 0){
+			document.body.style.cursor = 'auto';
+			document.getElementById("errorMsg").innerHTML = "The user might have zero tweets on twitter!";
 		}
+		else
+			this.takeRequiredData(data);
 	}
 };
 
@@ -104,6 +105,7 @@ function setFocus(elementId){
 function onSubmit(){ 
 	var screenName = document.getElementById('screenNameTextbox').value;
 	if(screenName.length > 0){	
+		document.body.style.cursor = 'wait';
 		twitter.screenName = encodeURIComponent(screenName);
 		twitter.callTwitterAPI('twitter.parseFirstResponse', 0);
 	}

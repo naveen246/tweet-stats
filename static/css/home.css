@@ -2,10 +2,7 @@ body{
 	background-color:#00aced;
 }
 .input{
-	margin-left: 350px;
 	font-size: 1.8em;
-	color: white;
-	font-weight: bold;
 }
 #dataForm{
 	display: none;
@@ -22,8 +19,11 @@ body{
 }
 .responseMsgs{
 	margin-top: 55px;
-	margin-left: 350px;
+	font-size: 1.1em;
+}
+.elements{
+	position:absolute;
+	left:25%;
 	color: white;
 	font-weight: bold;
-	font-size: 1.1em;
 }
